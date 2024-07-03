@@ -1,0 +1,124 @@
+$bg: black;
+.banner {
+  height: 600px;
+  background-color: $bg;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 3rem;
+  box-sizing: border-box;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $bg;
+    opacity: 0.4;
+  }
+  > h1,
+  p {
+    color: white;
+    font-size: 4rem;
+    width: 40%;
+    z-index: 10;
+  }
+  p {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    font-weight: 100;
+  }
+  > div {
+    display: flex;
+    button {
+      padding: 1rem;
+      width: 150px;
+      outline: none;
+      border: none;
+      z-index: 10;
+      border-radius: 5px;
+      margin: 1rem;
+      background-color: white;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.5s;
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      &:nth-child(odd) {
+        background-color: white;
+        color: black;
+      }
+      &:nth-child(even) {
+        background-color: rgb(112, 106, 106);
+        color: white;
+      }
+      svg {
+        font-size: 1.7rem;
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+.row {
+  background-color: $bg;
+  padding: 1rem;
+  > h2 {
+    margin: 0.3rem;
+    font-weight: 400;
+  }
+  > div {
+    display: flex;
+    // justify-content: center;
+    overflow-x: auto;
+  }
+}
+
+.card {
+  width: 200px;
+  margin: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.5s;
+
+  &:hover {
+    transform: translate(-10px) scale(1.1);
+  }
+
+  > img {
+    width: 150px;
+  }
+}
+.genreBox {
+  overflow-x: auto;
+  display: flex;
+  height: 75px;
+  background-color: $bg;
+  > a {
+    color: black;
+    text-align: center;
+    background-color: white;
+    padding: 1rem 0;
+    margin: 1rem;
+    border-radius: 5px;
+    transition: all 0.5s;
+    min-width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      background-color: antiquewhite;
+    }
+  }
+}
